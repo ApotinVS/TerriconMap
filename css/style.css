@@ -168,7 +168,7 @@ body.lock {
 
 .grid-wrapper {
   overflow: hidden;
-  width: 1500px;
+  width: 1400px;
   border: none;
   padding: 0 10px;
   text-align: start;
@@ -190,8 +190,8 @@ body.lock {
   margin-right: 15px;
   grid-gap: 5px;
   border: none;
-  -ms-grid-columns: 25% 25% 25% 25%;
-      grid-template-columns: 25% 25% 25% 25%;
+  -ms-grid-columns: 30% 10% 30% 30%;
+      grid-template-columns: 30% 10% 30% 30%;
       grid-template-areas: "soft-dev soft-dev agreg-delivery agreg-delivery" "soft-dev soft-dev sysintegration business-solution" "gamedev terricon-valey terricon-valey  business-solution" "marketing-design telecom telecom  medecine";
 }
 
