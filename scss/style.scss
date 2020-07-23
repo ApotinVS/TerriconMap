@@ -1,0 +1,618 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic&display=swap&subset=cyrillic-ext");
+header {
+	.header-title {
+		padding: 20px;
+		h1 {
+			font-family: "Roboto";
+			font-size: 36px;
+		}
+	}
+	.header-box {
+		display: flex;
+		justify-content: space-between;
+
+		.textlogo {
+			padding: 10px 20px;
+			p {
+				font-size: 24px;
+				font-family: "Roboto";
+			}
+			.logo-en {
+				display: none;
+			}
+		}
+
+		.language {
+			padding: 10px 20px;
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				min-width: 50px;
+				li {
+					flex: 0 1 50%;
+				}
+			}
+			.language-ru {
+				display: none;
+			}
+			.language-en {
+			}
+			.language-kz {
+			}
+		}
+	}
+}
+
+
+.left,
+.top,
+.bottom,
+.right {
+	position: absolute;
+}
+
+.container-border {
+	position: relative;
+	&:hover {
+		z-index: 1;
+		.top {
+			position: absolute;
+			top: -4px;
+			left: -2px;
+			height: 6px;
+			width: 100%;
+			background-color: #fff;
+			animation: animate-top 2s linear infinite;
+		}
+		.right {
+			position: absolute;
+			top: -2px;
+			right: -4px;
+			height: 100%;
+			width: 6px;
+			background-color: #fff;
+			animation: animate-right 2s linear infinite;
+			animation-delay: 1s;
+		}
+		.bottom {
+			position: absolute;
+			bottom: -4px;
+			left: -2px;
+			height: 6px;
+			width: 102%;
+			background-color: #fff;
+			animation: animate-bottom 2s linear infinite;
+		}
+		.left {
+			position: absolute;
+			top: -2px;
+			left: -4px;
+			height: 102%;
+			width: 6px;
+			background-color: #fff;
+			animation: animate-left 2s linear infinite;
+			animation-delay: 1s;
+		}
+	}
+	p {
+		padding: 5px;
+		font-family: "Roboto";
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: rgb(0, 162, 255);
+		letter-spacing: 0.2em;
+	}
+	padding: 5px 2px 5px 0;
+	border: 4px solid rgb(0, 162, 255);
+	border-radius: 10px;
+	line-height: 18px;
+	z-index: 0;
+	/*border-top-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-right: none;
+	border-top: none;*/
+}
+.grid-container {
+	display: grid;
+	grid-template-rows: auto;
+	justify-items: center;
+	align-items: center;
+	grid-gap: 5px;
+	padding: 5px;
+}
+img {
+	max-width: 100%;
+	padding: 0;
+}
+
+body.lock {
+	overflow: hidden;
+}
+.wrapper {
+	display: flex;
+	justify-content: center;
+}
+.grid-wrapper {
+	overflow: hidden;
+	width: 1500px;
+	border: none;
+	padding: 0 10px;
+	text-align: start;
+	justify-items: stretch;
+	align-items: start;
+	grid-template-columns: 6fr 2fr 2fr 2fr;
+	grid-template-areas:
+		"left-container fintech theproperty e-shop "
+		"left-container smartcity education e-shop "
+		"left-container media edu-est  transport"
+		"left-container media edu-est  services";
+}
+
+.left-container {
+	padding: 0;
+	justify-items: stretch;
+	align-items: start;
+	margin-right: 15px;
+	grid-gap: 5px;
+	border: none;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-areas:
+		"soft-dev soft-dev agreg-delivery agreg-delivery"
+		"soft-dev soft-dev sysintegration business-solution"
+		"gamedev terricon-valey terricon-valey  business-solution"
+		"marketing-design telecom telecom  medecine";
+
+	
+}
+.soft-dev {
+	z-index: 2;
+	align-self: start;
+	&__logo {
+		display: grid;
+		grid-gap: 2px;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+			"epam gexabyte softline"
+			"itbc itera terricon"
+			"jazzsoft libertas ."
+			"luxystech simplecode .";
+	}
+}
+.agreg-delivery {
+	z-index: 2;
+	align-self: start;
+	&__logo {
+		margin-top: 20px;
+		display: grid;
+		grid-gap: 2px;
+		align-self: center;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas: "cvetogis edok emenu kura";
+	}
+}
+.sysintegration {
+	z-index: 2;
+	align-self: start;
+	&__logo {
+		display: grid;
+		grid-gap: 2px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"novator plusmicro"
+			"profit xnet";
+	}
+}
+.marketing-design {
+	z-index: 2;
+	align-self: start;
+	&__logo {
+		display: grid;
+		grid-gap: 2px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"avrora brendfactory"
+			"cactus zigzag";
+	}
+}
+.gamedev {
+	z-index: 2;
+	align-self: start;
+	p {
+		font-size: 12px;
+		letter-spacing: 0.1em;
+	}
+	&__logo {
+		display: grid;
+		grid-gap: 2px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas: "anima dreamgate";
+	}
+}
+.medecine {
+	z-index: 2;
+	align-self: start;
+	&__logo {
+		display: grid;
+		grid-gap: 2px;
+		grid-template-columns: 1fr;
+		grid-template-areas: "damumed";
+	}
+}
+.business-solution {
+	z-index: 2;
+	align-self: start;
+	&__logo {
+		grid-gap: 2px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"gohost hoster"
+			"k2 k2"
+			"mindpro wto";
+	}
+}
+.terricon-valey {
+	align-self: center;
+	justify-items: center;
+	z-index: 2;
+	img {
+		max-width: 240px;
+	}
+	&__logo {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas: "trv";
+	}
+}
+.fintech {
+	z-index: 2;
+	align-self: start;
+	&__logo {
+		display: grid;
+		grid-gap: 2px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"banker wooppay"
+			"wk wooppay-wallet";
+	}
+}
+.education {
+	z-index: 2;
+	align-self: start;
+	grid-gap: 2px;
+	//height: 250px;
+	&__logo {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"bilimal mamandyk"
+			"robo scholarship";
+	}
+}
+.e-shop {
+	z-index: 2;
+	align-self: start;
+	&__logo {
+		display: grid;
+		grid-gap: 2px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"biosfera flipkz"
+			"mama-mia sanmarket"
+			"radist srckz"
+			"vidioset ww";
+	}
+}
+.smartcity {
+	z-index: 2;
+	align-self: start;
+	p {
+		font-size: 12px;
+		letter-spacing: 0.1em;
+	}
+	&__logo {
+		display: grid;
+		grid-gap: 2px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"belsendi-azamat npo"
+			"propusk senim";
+	}
+}
+.edu-est {
+	z-index: 2;
+	align-self: start;
+	&__logo {
+		display: grid;
+		grid-gap: 2px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"bankcolledge keu"
+			"kargtu kargtu"
+			"kargu step";
+	}
+}
+.services-1c {
+	z-index: 2;
+	align-self: start;
+	&__logo {
+		display: grid;
+		grid-gap: 2px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"itshef plast"
+			"vaniev vaniev";
+	}
+}
+.transport {
+	z-index: 2;
+	align-self: start;
+	&__logo {
+		display: grid;
+		grid-gap: 2px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas: "regionk smartgaz";
+	}
+}
+.media {
+	z-index: 2;
+	align-self: start;
+	&__logo {
+		grid-gap: 2px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"ekar go"
+			"nv sportkz";
+	}
+}
+.telecom {
+	z-index: 2;
+	align-self: start;
+	&__logo {
+		display: grid;
+		grid-gap: 2px;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+			"asiabel cherrynet fishnet"
+			"megatel optinet ttk";
+	}
+}
+.property {
+	z-index: 2;
+	align-self: start;
+	&__logo {
+		display: grid;
+		grid-gap: 2px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"kn richhouse"
+			"stl workapp";
+	}
+}
+
+//----------------Попапы
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 4;
+	background-color: rgba(0, 0, 0, 0.9);
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.8s ease 0s;
+
+	&__body {
+		min-height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 30px 10px;
+	}
+	&__content {
+		background-color: #fff;
+		color: #000;
+		max-width: 800px;
+		padding: 30px;
+		transition: all 0.8s ease 0s;
+		opacity: 0;
+		transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+	}
+
+	&__title {
+		font-size: 40px;
+		margin: 0px 0px 10px 0px;
+	}
+
+	&__subtitle {
+		font-size: 18px;
+		margin: 0 0 25px 0;
+	}
+
+	&__description {
+		margin: 0 0 30px 0;
+		line-height: 1.4;
+	}
+
+	&__goto {
+		display: flex;
+		justify-content: center;
+		font-size: 16px;
+		color: #262626;
+		text-transform: uppercase;
+		padding: 30px;
+		.goto-button {
+			&:visited {
+				color: #262626;
+			}
+			position: absolute;
+			padding: 10px 20px;
+			border: 2px solid #262626;
+			letter-spacing: 2px;
+			transition: 0.5s;
+			span:before,
+			span:after {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 28px;
+				height: 28px;
+				transition: 0.5s;
+			}
+			span:before {
+				border-bottom: 2px solid #262626;
+				border-left: 2px solid #262626;
+				transform: rotate(45deg);
+				top: 4px;
+				left: -8px;
+			}
+			span:after {
+				border-top: 2px solid #262626;
+				border-right: 2px solid #262626;
+				transform: rotate(45deg);
+				top: 4px;
+				right: -8px;
+			}
+			&:hover {
+				border-radius: 20px;
+				span:before {
+					left: -25px;
+					transform: rotate(-135deg);
+					animation: animateBefore 0.5s linear infinite;
+				}
+				span:after {
+					right: -25px;
+					transform: rotate(-135deg);
+					animation: animateAfter 0.5s linear infinite;
+				}
+			}
+		}
+	}
+	&.open {
+		opacity: 1;
+		visibility: visible;
+	}
+	&.open &__content {
+		transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
+		opacity: 1;
+	}
+}
+
+//---------Градиентная рамка
+.shadow-grad {
+	position: relative;
+	margin: 5px auto 0;
+	width: 70px;
+	height: 70px;
+	&:hover {
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: -3px;
+			top: -3px;
+			background: linear-gradient(
+				45deg,
+				#fb0094,
+				#0000ff,
+				#00ff00,
+				#ffff00,
+				#ff0000,
+				#fb0094,
+				#0000ff,
+				#00ff00,
+				#ffff00,
+				#ff0000
+			);
+			background-size: 400%;
+			width: calc(100% + 6px);
+			height: calc(100% + 6px);
+			z-index: -1;
+			animation: steam 20s linear infinite;
+		}
+		&::after {
+			filter: blur(20px);
+		}
+	}
+}
+
+//Анимации------------------------------------------------------
+//Анимация рамки блоков-----------------------------------------
+@keyframes animate-top {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+@keyframes animate-left {
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(-100%);
+	}
+}
+@keyframes animate-right {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}
+@keyframes animate-bottom {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+//--------------------------------------------------
+//Анимация градиентной рамки
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+//------------------------------------------------------
+//Анимация кнопки попапов
+@keyframes animateBefore {
+	0% {
+		left: -25px;
+	}
+	50% {
+		left: -20px;
+	}
+	100% {
+		left: -25px;
+	}
+}
+@keyframes animateAfter {
+	0% {
+		right: -25px;
+	}
+	50% {
+		right: -20px;
+	}
+	100% {
+		right: -25px;
+	}
+}
+
+//------Подключение файлов--------------------------------------
+@import "_area.scss";
+@import "_nullstyle";
